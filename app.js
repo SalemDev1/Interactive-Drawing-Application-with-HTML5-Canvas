@@ -38,5 +38,22 @@ canvas.addEventListener('mouseup', (event) => {
     drawShape(selectedShape, startX, startY, endX, endY);
 });
 
+//Task 3- Implement Shape Drawing Logic
+// Function to draw selected shape (basically your paint brush, now All you need to paint is, a few tools, a little instruction, and a vision in your mind.-Bob Ross)
+function drawShape(shape, x1, y1, x2, y2) {
+    ctx.beginPath();
+    ctx.strokeStyle = colorPicker.value;
 
-
+    if (shape === 'line') {
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+    } else if (shape === 'rectangle') {
+        const width = x2 - x1;
+        const height = y2 - y1;
+        ctx.rect(x1, y1, width, height);
+    } else if (shape === 'circle') {
+        const radius = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+        ctx.arc(x1, y1, radius, 0, 2 * Math.PI);
+    }
+    ctx.stroke();
+}
