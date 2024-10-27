@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Ross Secret Painting School</title>
+</head>
+<body>
+    <h2>Bob Ross Secret Painting School</h2>
+
+    <!-- Your pretty Canvas! -->
+    <canvas id="drawingCanvas" width="500" height="400" style="border: 1px solid black;"></canvas>
+    
+    <!-- gives you radio selections for shapes :D -->
+    <div>
+        <label><input type="radio" name="shape" value="line" checked> Line</label>
+        <label><input type="radio" name="shape" value="rectangle"> Rectangle</label>
+        <label><input type="radio" name="shape" value="circle"> Circle</label>
+    </div>
+
+    <!-- Color wheek to set drawing color -->
+    <label for="colorPicker">Choose Color:</label>
+    <input type="color" id="colorPicker" value="#000000">
+
+    <!-- Button that erases your beautiful canvas -->
+    <button id="clearCanvas">Erase your masterpieces</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
