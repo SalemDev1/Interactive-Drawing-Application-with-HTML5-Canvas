@@ -57,3 +57,15 @@ function drawShape(shape, x1, y1, x2, y2) {
     }
     ctx.stroke();
 }
+
+//Task 4- Add Color Selection and Canvas Clearing
+// Updates the  color based on color picker selected
+colorPicker.addEventListener('input', () => {
+    ctx.strokeStyle = colorPicker.value;
+});
+
+// Clears the canvas (erases your masterpiece)
+const clearButton = document.getElementById('clearCanvas');
+clearButton.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
